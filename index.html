@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>منصة المعين التفاعلية</title>
+    <link rel="icon" type="image/png" href="assets/logo.png">
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Segoe+UI:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #1A5F48; /* VERT */
+            --accent-color: #D4AF37;  /* DORÉ */
+            --bg-light: #F8F9FA;
+            --text-dark: #2D3436;
+        }
+        * { box-sizing: border-box; }
+        body {
+            margin: 0;
+            font-family: 'Amiri', 'Segoe UI', sans-serif;
+            background-color: var(--bg-light);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 15px;
+        }
+        .container {
+            background: white;
+            width: 100%;
+            max-width: 480px;
+            padding: 35px 25px;
+            border-radius: 20px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.08);
+            text-align: center;
+            border-top: 5px solid var(--primary-color);
+        }
+        .logo-img {
+            max-width: 110px;
+            margin-bottom: 20px;
+        }
+        h1 {
+            color: var(--primary-color);
+            font-size: 28px;
+            margin: 0 0 8px 0;
+            font-weight: 800;
+        }
+        p.subtitle {
+            color: #7F8C8D;
+            font-size: 18px;
+            margin-bottom: 35px;
+            font-weight: 600;
+        }
+        
+        /* --- BOUTONS DU MENU PRINCIPAL --- */
+        .menu-button {
+            display: flex;
+            align-items: center;
+            /* C'est ici que j'ai changé flex-start en center pour centrer le contenu */
+            justify-content: center; 
+            width: 100%;
+            padding: 18px;
+            margin-bottom: 15px;
+            background: white;
+            border: 2px solid #E0E0E0;
+            border-radius: 15px;
+            text-decoration: none;
+            color: var(--text-dark);
+            font-size: 20px;
+            font-weight: 600;
+            transition: all 0.2s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        .menu-button svg {
+            width: 28px;
+            height: 28px;
+            margin-left: 15px;
+            fill: none;
+            stroke: var(--primary-color); 
+            stroke-width: 2;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+            transition: all 0.3s ease;
+            flex-shrink: 0;
+        }
+        
+        .menu-button:hover {
+            border-color: var(--primary-color);
+            background-color: #f0f7f4; 
+            color: var(--primary-color); 
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(26, 95, 72, 0.1);
+        }
+        
+        .menu-button:hover svg {
+            stroke: var(--accent-color); 
+            transform: scale(1.1);
+        }
+        
+        /* --- Zone des petits boutons secondaires --- */
+        .secondary-actions {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid #eee;
+        }
+
+        .small-link-btn {
+            background: transparent;
+            border: none;
+            color: #7F8C8D;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 16px;
+            font-family: inherit;
+            padding: 8px;
+            transition: color 0.2s;
+            font-weight: 600;
+            text-decoration: none;
+        }
+        .small-link-btn svg { width: 20px; height: 20px; stroke: currentColor; fill: none; stroke-width: 2; }
+        
+        .small-link-btn:hover { color: var(--primary-color); }
+        
+        .small-link-btn.support { color: var(--accent-color); } 
+        .small-link-btn.support svg { fill: currentColor; stroke: none; }
+        .small-link-btn.support:hover { color: #b3922b; transform: scale(1.05); }
+
+        .footer-note {
+            margin-top: 20px;
+            font-size: 14px;
+            color: #aaa;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="assets/logo.png" alt="شعار المعين" class="logo-img">
+        
+        <h1>منصة المعين التفاعلية</h1>
+
+        <a href="memorization.html" class="menu-button">
+            <svg viewBox="0 0 24 24"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="23"/><line x1="8" y1="23" x2="16" y2="23"/></svg>
+            ابدأ تسميع حفظك
+        </a>
+    </div>
+</body>
+</html>
